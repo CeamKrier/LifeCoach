@@ -36,3 +36,12 @@ textarea {
     justify-content: center;
 
 }
+
+.top-margin-twenty{
+    margin-top:25px;
+}
+.line-padding{
+    line-height:inherit;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom:15px;
+}

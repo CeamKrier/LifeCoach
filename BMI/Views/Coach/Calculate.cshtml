@@ -4,82 +4,113 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Calculate</h2>
-
-<div class="row">
-
+<div class="row top-margin-twenty">
+    <h2>Calculate</h2>
+    <hr />
     <div class="col-sm-6 col-md-6">
 
-        <form class="form-horizontal">
+        @*
+            Weight
+            Height
+            Gender
+            Age
+        *@
+
+        <form action="Result" class="form-horizontal" method="post">
             <fieldset>
-                <legend>Legend</legend>
+                
                 <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <label for="input" class="col-lg-2 control-label">Weight</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                        <input type="text" name="userWeight" class="form-control" placeholder="Enter your weight (kg)">
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <label for="input" class="col-lg-2 control-label">Height</label>
                     <div class="col-lg-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Checkbox
-                            </label>
-                        </div>
+                        <input type="text" name="userHeight" class="form-control" placeholder="Enter your height (cm)">
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                    <label for="input" class="col-lg-2 control-label">Age</label>
                     <div class="col-lg-10">
-                        <textarea class="form-control" rows="3" id="textArea"></textarea>
-                        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                        <input type="text" name="userAge" class="form-control" placeholder="Enter your age">
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label class="col-lg-2 control-label">Radios</label>
+                    <label class="col-lg-2 control-label">Gender</label>
                     <div class="col-lg-10">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                                Option one is this
+                                <input type="radio" name="userGender" value="Male" checked="">
+                                Male
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                Option two can be something else
+                                <input type="radio" name="userGender" value="Female">
+                                Female
                             </label>
                         </div>
                     </div>
                 </div>
+                
+                
+               
+                @*
+                    Waist
+                    Hip
+                    Forearms
+                    Wrist
+                *@
+
                 <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">Selects</label>
+                    <label for="input" class="col-lg-2 control-label">Waist</label>
                     <div class="col-lg-10">
-                        <select class="form-control" id="select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                        <br>
-                        <select multiple="" class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                        <input type="text" name="userWaist" class="form-control" placeholder="Enter your waist diameter (cm)">
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <button type="reset" class="btn btn-default">Cancel</button>
+                    <label for="input" class="col-lg-2 control-label">Hip</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="userHips" class="form-control" placeholder="Enter your hips diameter (cm)">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-lg-2 control-label">Forearms</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="userForearms" class="form-control" placeholder="Enter your forearms diameter (cm)">
+                    </div>
+                </div>
+
+                <div class="form-group" style="padding-bottom:15px; border-bottom: 1px solid #e5e5e5;">
+                    <label for="input" class="col-lg-2 control-label">Wrist</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="userWrist" class="form-control" placeholder="Enter your wrist diameter (cm)">
+                    </div>
+                </div>
+
+
+                
+                <div class="form-group has-success">
+                    <label class="col-lg-2 control-label" for="inputSuccess">*Target*</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="userTargetWeight" class="form-control" id="inputSuccess" placeholder="Please enter your target  weight (kg)">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-4">
+                        @*<button type="reset" class="btn btn-default">Cancel</button>*@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
+                
             </fieldset>
         </form>
 
@@ -88,90 +119,62 @@
 
     <div class="col-sm-6 col-md-6">
 
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-            <li><a href="#profile" data-toggle="tab">Profile</a></li>
-            <li class="disabled"><a>Disabled</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    Dropdown <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#dropdown1" data-toggle="tab">Action</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#dropdown2" data-toggle="tab">Another action</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade active in" id="home">
-                <table class="table table-striped table-hover ">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Column heading</th>
-                            <th>Column heading</th>
-                            <th>Column heading</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                        </tr>
-                        <tr class="info">
-                            <td>3</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                        </tr>
-                        <tr class="success">
-                            <td>4</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                        </tr>
-                        <tr class="danger">
-                            <td>5</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                        </tr>
-                        <tr class="warning">
-                            <td>6</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                        </tr>
-                        <tr class="active">
-                            <td>7</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="tab-pane fade" id="profile">
-                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
-            </div>
-            <div class="tab-pane fade" id="dropdown1">
-                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
-            </div>
-            <div class="tab-pane fade" id="dropdown2">
-                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+        <div class="panel panel-default">
+            <div class="panel-heading">Panel heading</div>
+            <div class="panel-body">
+                Panel content
             </div>
         </div>
+        <h4>Estimated Calorie Need Per Day</h4>
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr class="info">
+                    <th>Age</th>
+                    <th>Sedentary</th>
+                    <th>Moderately Active</th>
+                    <th>Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2-10</td>
+                    <td>1.200</td>
+                    <td>1.400</td>
+                    <td>1.650</td>
+                </tr>
+                <tr>
+                    <td>11-20</td>
+                    <td>2.200</td>
+                    <td>2.530</td>
+                    <td>2.870</td>
+                </tr>
+                <tr>
+                    <td>21-30</td>
+                    <td>2.150</td>
+                    <td>2.400</td>
+                    <td>2.700</td>
+                </tr>
+                <tr>
+                    <td>31-45</td>
+                    <td>2.100</td>
+                    <td>2.300</td>
+                    <td>2.530</td>
+                </tr>
+                <tr>
+                    <td>45-60</td>
+                    <td>1.930</td>
+                    <td>2.130</td>
+                    <td>2.460</td>
+                </tr>
+                <tr>
+                    <td>60+</td>
+                    <td>1.800</td>
+                    <td>2.025</td>
+                    <td>2.400</td>
+                </tr>
 
+            </tbody>
+        </table> 
 
     </div>
-
 </div>
