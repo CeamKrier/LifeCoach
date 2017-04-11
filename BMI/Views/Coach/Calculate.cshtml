@@ -40,7 +40,7 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" style="padding-bottom:15px; border-bottom: 1px solid #e5e5e5;">
                     <label class="col-lg-2 control-label">Gender</label>
                     <div class="col-lg-10">
                         <div class="radio">
@@ -67,7 +67,7 @@
                     Wrist
                 *@
 
-                <div class="form-group">
+                @*<div class="form-group">
                     <label for="input" class="col-lg-2 control-label">Waist</label>
                     <div class="col-lg-10">
                         <input type="text" name="userWaist" class="form-control" placeholder="Enter your waist diameter (cm)">
@@ -93,7 +93,7 @@
                     <div class="col-lg-10">
                         <input type="text" name="userWrist" class="form-control" placeholder="Enter your wrist diameter (cm)">
                     </div>
-                </div>
+                </div>*@
 
 
                 
@@ -105,8 +105,8 @@
                 </div>
 
                 <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-4">
-                        @*<button type="reset" class="btn btn-default">Cancel</button>*@
+                    <div class="col-lg-10 col-lg-offset-3">
+                       <button type="reset" class="btn btn-default">Cancel</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
@@ -120,61 +120,13 @@
     <div class="col-sm-6 col-md-6">
 
         <div class="panel panel-default">
-            <div class="panel-heading">Panel heading</div>
+            <div class="panel-heading">How it works?</div>
             <div class="panel-body">
-                Panel content
+                <p>The calculator will process your inputs to find your <strong><em>Body Mass Index</em></strong> and <strong><em>Body Fat Percentage</em></strong>.</p>
+                <p>According to those, the calculator will generate <strong>a workout schedule</strong> and <strong>a list of healthy nutritions</strong> for you!</p>
             </div>
         </div>
-        <h4>Estimated Calorie Need Per Day</h4>
-        <table class="table table-striped table-hover ">
-            <thead>
-                <tr class="info">
-                    <th>Age</th>
-                    <th>Sedentary</th>
-                    <th>Moderately Active</th>
-                    <th>Active</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2-10</td>
-                    <td>1.200</td>
-                    <td>1.400</td>
-                    <td>1.650</td>
-                </tr>
-                <tr>
-                    <td>11-20</td>
-                    <td>2.200</td>
-                    <td>2.530</td>
-                    <td>2.870</td>
-                </tr>
-                <tr>
-                    <td>21-30</td>
-                    <td>2.150</td>
-                    <td>2.400</td>
-                    <td>2.700</td>
-                </tr>
-                <tr>
-                    <td>31-45</td>
-                    <td>2.100</td>
-                    <td>2.300</td>
-                    <td>2.530</td>
-                </tr>
-                <tr>
-                    <td>45-60</td>
-                    <td>1.930</td>
-                    <td>2.130</td>
-                    <td>2.460</td>
-                </tr>
-                <tr>
-                    <td>60+</td>
-                    <td>1.800</td>
-                    <td>2.025</td>
-                    <td>2.400</td>
-                </tr>
-
-            </tbody>
-        </table> 
+        
 
     </div>
 </div>
