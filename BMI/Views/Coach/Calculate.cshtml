@@ -18,7 +18,7 @@
 
         <form action="Result" class="form-horizontal" method="post">
             <fieldset>
-                
+
                 <div class="form-group">
                     <label for="input" class="col-lg-2 control-label">Weight</label>
                     <div class="col-lg-10">
@@ -57,46 +57,46 @@
                         </div>
                     </div>
                 </div>
-                
-                
-               
+
+
+
                 @*
-                    Waist
-                    Hip
-                    Forearms
-                    Wrist
+            Waist
+            Hip
+            Forearms
+            Wrist
                 *@
 
                 @*<div class="form-group">
-                    <label for="input" class="col-lg-2 control-label">Waist</label>
-                    <div class="col-lg-10">
-                        <input type="text" name="userWaist" class="form-control" placeholder="Enter your waist diameter (cm)">
-                    </div>
+                <label for="input" class="col-lg-2 control-label">Waist</label>
+                <div class="col-lg-10">
+                    <input type="text" name="userWaist" class="form-control" placeholder="Enter your waist diameter (cm)">
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="input" class="col-lg-2 control-label">Hip</label>
-                    <div class="col-lg-10">
-                        <input type="text" name="userHips" class="form-control" placeholder="Enter your hips diameter (cm)">
-                    </div>
+            <div class="form-group">
+                <label for="input" class="col-lg-2 control-label">Hip</label>
+                <div class="col-lg-10">
+                    <input type="text" name="userHips" class="form-control" placeholder="Enter your hips diameter (cm)">
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="input" class="col-lg-2 control-label">Forearms</label>
-                    <div class="col-lg-10">
-                        <input type="text" name="userForearms" class="form-control" placeholder="Enter your forearms diameter (cm)">
-                    </div>
+            <div class="form-group">
+                <label for="input" class="col-lg-2 control-label">Forearms</label>
+                <div class="col-lg-10">
+                    <input type="text" name="userForearms" class="form-control" placeholder="Enter your forearms diameter (cm)">
                 </div>
+            </div>
 
-                <div class="form-group" style="padding-bottom:15px; border-bottom: 1px solid #e5e5e5;">
-                    <label for="input" class="col-lg-2 control-label">Wrist</label>
-                    <div class="col-lg-10">
-                        <input type="text" name="userWrist" class="form-control" placeholder="Enter your wrist diameter (cm)">
-                    </div>
-                </div>*@
+            <div class="form-group" style="padding-bottom:15px; border-bottom: 1px solid #e5e5e5;">
+                <label for="input" class="col-lg-2 control-label">Wrist</label>
+                <div class="col-lg-10">
+                    <input type="text" name="userWrist" class="form-control" placeholder="Enter your wrist diameter (cm)">
+                </div>
+            </div>*@
 
 
-                
+
                 <div class="form-group has-success">
                     <label class="col-lg-2 control-label" for="inputSuccess">*Target*</label>
                     <div class="col-lg-10">
@@ -104,13 +104,25 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-3">
-                       <button type="reset" class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group has-success">
+                    <label for="select" class="col-lg-2 control-label">Activity Level</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" name="userActivityLevel" id="select">
+                            <option>Sedentary</option>
+                            <option>Moderately Active</option>
+                            <option>Active</option>
+                            
+                        </select>
                     </div>
                 </div>
-                
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-3">
+                                <button type="reset" class="btn btn-default">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+
             </fieldset>
         </form>
 
@@ -123,6 +135,12 @@
             <div class="panel-heading">How it works?</div>
             <div class="panel-body">
                 <p>The calculator will process your inputs to find your <strong><em>Body Mass Index</em></strong> and <strong><em>Body Fat Percentage</em></strong>.</p>
+                <p>While choosing <strong>activity level</strong> please consider the followings:</p>
+                <ul>
+                    <li><strong>Sedentary:</strong> Little or no exercise and desk job</li>
+                    <li><strong>Moderately Active:</strong> Light daily activity and exercise 1-3 days in a week</li>
+                    <li><strong>Active:</strong> Active daily life and exercise 3-5 days in a week</li>
+                </ul>
                 <p>According to those, the calculator will generate <strong>a workout schedule</strong> and <strong>a list of healthy nutritions</strong> for you!</p>
             </div>
         </div>

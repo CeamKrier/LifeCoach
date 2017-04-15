@@ -175,9 +175,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EstimatedCalories.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NutritionPlan.cs" />
     <Compile Include="Models\UserResult.cs" />
+    <Compile Include="Models\WorkoutSchedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -188,6 +191,7 @@
     <Content Include="Content\Images\belly-radius.png" />
     <Content Include="Content\Images\cereals.png" />
     <Content Include="Content\Images\milk-cheese.png" />
+    <Content Include="Content\Images\skip-track.png" />
     <Content Include="Content\Images\workout-routine.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

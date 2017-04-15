@@ -16,6 +16,14 @@ namespace BMI.Models
         public int CalorieToBurn { get; set; }
         public string BFResult { get; set; }
         public double FatPerc { get; set; }
+        public string UserActivityLevel { get; set; }
+        public int EstimatedTimeToReachTarget { get; set; }
+        public LinkedList<WorkoutSchedule> WorkoutSchedule { get; set; }
+        public LinkedList<NutritionPlan> NutritionPlan { get; set; }
+        public EstimatedCalories EstimatedCalories { get; set; }
+
+
+
 
 
     }

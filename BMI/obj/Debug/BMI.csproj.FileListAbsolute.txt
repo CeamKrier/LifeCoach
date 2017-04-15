@@ -67,6 +67,8 @@ C:\Users\Emre\Git\Source\Repos\BMI\BMI\bin\Microsoft.Owin.Security.MicrosoftAcco
 C:\Users\Emre\Git\Source\Repos\BMI\BMI\obj\Debug\BMI.csprojResolveAssemblyReference.cache
 C:\Users\Emre\Git\Source\Repos\BMI\BMI\obj\Debug\BMI.dll
 C:\Users\Emre\Git\Source\Repos\BMI\BMI\obj\Debug\BMI.pdb
+C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\System.Web.Mvc.dll
+C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\System.Web.Optimization.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\roslyn\csc.exe
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -102,8 +104,6 @@ C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\Microsoft.Web.Infrastructure.dl
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\Newtonsoft.Json.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\Owin.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\System.Web.Helpers.dll
-C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\System.Web.Mvc.dll
-C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\System.Web.Optimization.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\System.Web.Razor.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\System.Web.WebPages.dll
@@ -135,4 +135,3 @@ C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\Microsoft.Owin.Security.Twitter
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\obj\Debug\BMI.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\obj\Debug\BMI.pdb
-C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\obj\Debug\BMI.csprojResolveAssemblyReference.cache

@@ -1,4 +1,5 @@
 ﻿@model BMI.Models.UserResult 
+
 @{
     ViewBag.Title = "Result";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,7 +8,7 @@
 
 <div class="row">
 
-    <div class="col-lg-4 col-md-4" style="padding-top:39px;">
+    <div class="col-lg-3 col-md-3" style="padding-top:39px;">
 
         <div class="panel panel-info">
             <div class="panel-heading">
@@ -28,27 +29,162 @@
                         <p class="list-group-item-text">@Model.Message calories to reach @Model.TargetWeight Kg</p>
                     </a>
                 </div>
-                
-                @*<div style="display:inline-flex">
-                    <h4 style="color:#75caeb">:  </h4>
-                    <h4>@Model.Weight</h4>
-                </div>
-
-                
-                <h4>Fat percentage: @Model.FatPerc</h4>
-                <h4>Result: @Model.BFResult</h4>
-                <h4>To reach target: @Model.Message</h4>*@
-                
             </div>
         </div>
 
     
     </div>
+    <div class="col-md-1" style="padding-top:170px; text-align:center;">
+        <img src="~/Content/Images/skip-track.png" />
+    </div>
+
+    <div class="col-lg-8 col-md-8" style="padding-top:37px;">
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#workout" data-toggle="tab">Workout Schedule</a></li>
+            <li><a href="#nutrition" data-toggle="tab">Nutrition Plan</a></li>
+            <li><a href="#calories" data-toggle="tab">Estimation</a></li>
+            @*<li class="disabled"><a>Disabled</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#dropdown1" data-toggle="tab">Action</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#dropdown2" data-toggle="tab">Another action</a></li>
+                </ul>
+            </li>*@
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="workout">
+                
+                <table class="table table-striped table-hover">
+
+                    <thead>
+
+                        <tr class="info">
+                            <th>Workout Name</th>
+                            <th>Number of Sets</th>
+                            <th>Number of Repeats</th>
+                            <th>Target Area</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.WorkoutSchedule)
+                        {
+                            <tr>
+                                <td>@item.WorkoutName</td>
+                                <td>@item.SetNumber</td>
+                                <td>@item.RepeatNumber</td>
+                                <td>@item.WorkoutTargetArea</td>
+                            </tr>
+
+                        }
+                    </tbody>
+
+                </table>
+
+                </div>
+            <div class="tab-pane fade" id="nutrition">
+
+
+
+            </div>
+            <div class="tab-pane fade" id="calories">
+                <h5>Daily Calorie Consumption</h5>
+                <table class="table table-striped table-hover">
+
+                    <thead>
+
+                        <tr class="info">
+                            <th>Age</th>
+                            <th>Sedentary</th>
+                            <th>Moderately Active</th>
+                            <th>Active</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                       
+                            <tr>
+                                <td style="color:#75caeb;">@Model.EstimatedCalories.MinAge - @Model.EstimatedCalories.MaxAge</td>
+                                <td>@Model.EstimatedCalories.Sedentary</td>
+                                <td>@Model.EstimatedCalories.ModeratelyActive</td>
+                                <td>@Model.EstimatedCalories.Active</td>
+                            </tr>
+
+                    </tbody>
+
+                </table>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">What you can expect?</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>Selected Activity Level:</strong> @Model.UserActivityLevel</p>
+                        <p><strong>Estimated Duration to Reach Target Weight:</strong> @Model.EstimatedTimeToReachTarget Weeks ~ @DateTime.Now.AddDays(Model.EstimatedTimeToReachTarget * 7).ToString("ddd d MMM")</p>
+                    </div>
+                </div>
+
+            </div>
+            @*<div class="tab-pane fade" id="dropdown1">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+            </div>
+            <div class="tab-pane fade" id="dropdown2">
+                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+            </div>*@
+        </div>
+
+    </div>
+
+    @*<div class="col-lg-3 col-md-3" >
+        <h4>Your Workout Plan</h4>
+       
+
+    </div>*@
+
+    @*<div class="col-md-1" style="padding-top:170px; text-align:center;">
+        <img src="~/Content/Images/skip-track.png" />
+    </div>
+
+    <div class="col-lg-4 col-md-4">
+        <h4>Your Nutrition Plan</h4>
+        <table class="table table-striped table-hover">
+
+            <thead>
+
+                <tr class="info">
+                    <th>Meal Type</th>
+                    <th>Nutrition Name</th>
+                    <th>Serving</th>
+                    <th>Calories</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var item in Model.WorkoutSchedule)
+                {
+                    <tr>
+                        <td>@item.WorkoutName</td>
+                        <td>@item.SetNumber</td>
+                        <td>@item.RepeatNumber</td>
+                        <td>@item.WorkoutTargetArea</td>
+                    </tr>
+
+                }
+            </tbody>
+
+        </table>
+
+    </div>*@
+
 
 
     
 </div>
-<div class="row">
+@*<div class="row">
 
     <div class="col-lg-4 col-md-4">
 
@@ -105,4 +241,4 @@
 
     </div>
 
-</div>
+</div>*@
