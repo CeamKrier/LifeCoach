@@ -18,9 +18,126 @@ namespace BMI.Controllers
         public ActionResult Result(string userWeight, string userHeight, string userAge, string userGender, string userTargetWeight, string userActivityLevel)
         {
 
-            //LinkedList<NutritionPlan> nutritionList = new LinkedList<NutritionPlan>();
 
-            //LinkedList<EstimatedCalories> estimatedCalories = new LinkedList<EstimatedCalories>();
+            //Muscle Growth Meal Plan
+            LinkedList<NutritionPlan> nutritionListMuscle = new LinkedList<NutritionPlan>();
+
+            NutritionPlan Mushroom_Egg = new NutritionPlan();
+            Mushroom_Egg.NutritionName = "Mushroom & Pepper Egg White Omelet";
+            Mushroom_Egg.MealType = "Breakfast";
+            Mushroom_Egg.ServingAmount = "2 Omelet";
+            Mushroom_Egg.CalorieOfNutrition = 643;
+
+            nutritionListMuscle.AddLast(Mushroom_Egg);
+
+            NutritionPlan Yogurt = new NutritionPlan();
+            Yogurt.NutritionName = "Non-Fat Yogurt";
+            Yogurt.MealType = "Breakfast";
+            Yogurt.ServingAmount = "2 Bowl";
+            Yogurt.CalorieOfNutrition = 274;
+
+            nutritionListMuscle.AddLast(Yogurt);
+
+            NutritionPlan Apple = new NutritionPlan();
+            Apple.NutritionName = "Apple";
+            Apple.MealType = "Breakfast";
+            Apple.ServingAmount = "1 Apple";
+            Apple.CalorieOfNutrition = 94;
+
+            nutritionListMuscle.AddLast(Apple);
+
+            NutritionPlan Cottage_Cheese = new NutritionPlan();
+            Cottage_Cheese.NutritionName = "Cottage Cheese and Salsa";
+            Cottage_Cheese.MealType = "Lunch";
+            Cottage_Cheese.ServingAmount = "2 Serving";
+            Cottage_Cheese.CalorieOfNutrition = 688;
+
+            nutritionListMuscle.AddLast(Cottage_Cheese);
+
+
+            NutritionPlan Granola = new NutritionPlan();
+            Granola.NutritionName = "Granola";
+            Granola.MealType = "Lunch";
+            Granola.ServingAmount = "60 Grams";
+            Granola.CalorieOfNutrition = 293;
+
+            nutritionListMuscle.AddLast(Granola);
+
+            NutritionPlan Salmon = new NutritionPlan();
+            Salmon.NutritionName = "Balsamic Salmon";
+            Salmon.MealType = "Dinner";
+            Salmon.ServingAmount = "2 Serving";
+            Salmon.CalorieOfNutrition = 598;
+
+            nutritionListMuscle.AddLast(Salmon);
+
+            NutritionPlan Artichokes = new NutritionPlan();
+            Artichokes.NutritionName = "Artichokes";
+            Artichokes.MealType = "Dinner";
+            Artichokes.ServingAmount = "2 Serving";
+            Artichokes.CalorieOfNutrition = 365;
+
+            nutritionListMuscle.AddLast(Artichokes);
+
+
+
+
+
+
+
+            //Cardio Meal Plan
+            LinkedList<NutritionPlan> nutritionListCardio = new LinkedList<NutritionPlan>();
+
+            NutritionPlan Steak_Egg = new NutritionPlan();
+            Steak_Egg.NutritionName = "Steak and Egg Hash";
+            Steak_Egg.MealType = "Breakfast";
+            Steak_Egg.ServingAmount = "1 Serving";
+            Steak_Egg.CalorieOfNutrition = 516;
+
+            nutritionListCardio.AddLast(Steak_Egg);
+
+            NutritionPlan Blueberries = new NutritionPlan();
+            Blueberries.NutritionName = "Blueberries";
+            Blueberries.MealType = "Breakfast";
+            Blueberries.ServingAmount = "150 Grams";
+            Blueberries.CalorieOfNutrition = 87;
+
+            nutritionListCardio.AddLast(Blueberries);
+
+            NutritionPlan Butter_Berry = new NutritionPlan();
+            Butter_Berry.NutritionName = "Almond Butter Berry Protein Smoothie";
+            Butter_Berry.MealType = "Lunch";
+            Butter_Berry.ServingAmount = "1 Smoothie";
+            Butter_Berry.CalorieOfNutrition = 448;
+
+            nutritionListCardio.AddLast(Butter_Berry);
+
+            NutritionPlan Butter_Celery = new NutritionPlan();
+            Butter_Celery.NutritionName = "Almond Butter & Celery";
+            Butter_Celery.MealType = "Lunch";
+            Butter_Celery.ServingAmount = "1 Serving";
+            Butter_Celery.CalorieOfNutrition = 217;
+
+            nutritionListCardio.AddLast(Butter_Celery);
+
+            NutritionPlan Pasta = new NutritionPlan();
+            Pasta.NutritionName = "Pasta la Checca";
+            Pasta.MealType = "Dinner";
+            Pasta.ServingAmount = "1 Serving";
+            Pasta.CalorieOfNutrition = 360;
+
+            nutritionListCardio.AddLast(Pasta);
+
+            NutritionPlan Cottage = new NutritionPlan();
+            Cottage.NutritionName = "Cottage Cheese & Cantaloupe";
+            Cottage.MealType = "Dinner";
+            Cottage.ServingAmount = "1 Serving";
+            Cottage.CalorieOfNutrition = 190;
+
+            nutritionListCardio.AddLast(Cottage);
+
+
+
 
             EstimatedCalories upToTen = new EstimatedCalories();
             upToTen.MaxAge = 10;
@@ -132,12 +249,14 @@ namespace BMI.Controllers
             res.TargetWeight = userTargetWeight;
             res.UserActivityLevel = userActivityLevel;
 
-
             
 
 
-
             
+
+  
+
+          
 
            
 
@@ -249,24 +368,15 @@ namespace BMI.Controllers
             res.CalorieToBurn = 7860 * Math.Abs(kgDeficit);
 
 
-            if (Convert.ToInt16(userWeight) < Convert.ToInt16(userTargetWeight))
-            {
-                res.Message = "You need to gain " + res.CalorieToBurn;
-            }
-            else if (Convert.ToInt16(userWeight) > Convert.ToInt16(userTargetWeight))
-            {
-                res.Message = "You need to burn " + res.CalorieToBurn;
-            }
-            //7860 cal for per kg
-
-
-
-
             double result=0.0;
 
             //Control of the workout schedules
             if (Convert.ToInt16(userTargetWeight) > Convert.ToInt16(userWeight))
             {
+                res.NutritionPlan = nutritionListMuscle;
+
+                res.Message = "You need to gain " + res.CalorieToBurn;
+
                 res.WorkoutSchedule = workoutList;
 
                 //also do estimations, using fixed 3k calorie for muscle growth
@@ -288,6 +398,11 @@ namespace BMI.Controllers
             }
             else if (Convert.ToInt16(userTargetWeight) < Convert.ToInt16(userWeight))
             {
+
+                res.NutritionPlan = nutritionListCardio;
+
+                res.Message = "You need to burn " + res.CalorieToBurn;
+
                 //remove last 3 entries which are belong to muscle growth schedule
                 workoutList.RemoveLast();
                 workoutList.RemoveLast();
@@ -323,7 +438,7 @@ namespace BMI.Controllers
 
 
 
-                //also do estimations, using fixed 3k calorie for muscle growth
+                //also do estimations, using fixed 3k calories for muscle growth
                 if (userActivityLevel.Equals("Sedentary"))
                 {
                     result = (res.CalorieToBurn) / (res.EstimatedCalories.Sedentary - 100);

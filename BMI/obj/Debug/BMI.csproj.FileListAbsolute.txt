@@ -135,3 +135,4 @@ C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\Microsoft.Owin.Security.Twitter
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\obj\Debug\BMI.dll
 C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\obj\Debug\BMI.pdb
+C:\Users\Emre\Git\Source\Repos\LifeCoach\BMI\obj\Debug\BMI.csprojResolveAssemblyReference.cache
